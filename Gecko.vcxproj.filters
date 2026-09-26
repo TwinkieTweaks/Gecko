@@ -189,6 +189,9 @@
     <ClCompile Include="Includes\Gecko\ScriptManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Includes\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Includes\angelscript\sdk\add_on\autowrapper\aswrappedcall.h">
