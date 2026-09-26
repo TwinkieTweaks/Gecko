@@ -1,4 +1,4 @@
-name: C++ Unit Tests
+name: Run tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "development" ]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: windows-latest
 
     steps:
@@ -17,8 +17,16 @@ jobs:
     - name: Visual Studio command prompt
       uses: ilammy/msvc-dev-cmd@v1
 
+    - name: Cache intermediate files
+      uses: actions/cache@v4
+      with:
+        path: Intermediates
+        key: ${{ runner.os }}-msbuild-${{ matrix.config }}-${{ matrix.platform }}-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-msbuild-${{ matrix.config }}-${{ matrix.platform }}-
+
     - name: Build solution
       run: msbuild Gecko.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Run tests
-      run: vstest.console.exe x64/Release/Gecko.dll /Platform:x64
+      run: vstest.console.exe Builds/x64/Release/Gecko.dll /Platform:x64
