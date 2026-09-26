@@ -21,9 +21,9 @@ jobs:
       uses: actions/cache@v4
       with:
         path: Intermediates
-        key: ${{ runner.os }}-msbuild-${{ matrix.config }}-${{ matrix.platform }}-${{ github.sha }}
+        key: ${{ runner.os }}-msbuild-${{ github.sha }}
         restore-keys: |
-          ${{ runner.os }}-msbuild-${{ matrix.config }}-${{ matrix.platform }}-
+          ${{ runner.os }}-msbuild-
 
     - name: Build solution
       run: msbuild Gecko.sln /p:Configuration=Release /p:Platform=x64

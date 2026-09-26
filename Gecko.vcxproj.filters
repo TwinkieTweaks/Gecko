@@ -398,5 +398,6 @@
   <ItemGroup>
     <None Include="Includes\DOCS.md" />
     <None Include="Includes\Gecko\Exports\README.md" />
+    <None Include=".github\workflows\tests.yml" />
   </ItemGroup>
 </Project>

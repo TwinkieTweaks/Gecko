@@ -306,6 +306,7 @@
     </MASM>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".github\workflows\tests.yml" />
     <None Include="Includes\DOCS.md" />
     <None Include="Includes\Gecko\Exports\README.md" />
   </ItemGroup>
