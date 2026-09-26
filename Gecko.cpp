@@ -67,9 +67,9 @@ namespace Gecko
 			Assert::IsFalse(*GetVarByName("ChildAsParentIsNull"));
 			Assert::IsFalse(*GetVarByName("SiblingAsParentIsNull"));
 
-			Assert::IsTrue(*GetVarByName("ChildAsSiblingIsNull"));
+			Assert::IsTrue( *GetVarByName("ChildAsSiblingIsNull"));
 			Assert::IsFalse(*GetVarByName("ChildAsParentAsChildIsNull"));
-			Assert::IsTrue(*GetVarByName("SiblingAsChildIsNull"));
+			Assert::IsTrue( *GetVarByName("SiblingAsChildIsNull"));
 			Assert::IsFalse(*GetVarByName("SiblingAsParentAsSiblingIsNull"));
 		}
 	};
