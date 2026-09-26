@@ -80,29 +80,29 @@
     <LinkIncremental>true</LinkIncremental>
     <ExternalIncludePath>Includes;$(ExternalIncludePath)</ExternalIncludePath>
     <OutDir>$(SolutionDir)Builds\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Intermediates</IntDir>
+    <IntDir>Intermediates\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ExternalIncludePath>Includes;$(ExternalIncludePath)</ExternalIncludePath>
     <OutDir>$(SolutionDir)Builds\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Intermediates</IntDir>
+    <IntDir>Intermediates\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <ExternalIncludePath>Includes;$(ExternalIncludePath)</ExternalIncludePath>
     <OutDir>$(SolutionDir)Builds\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Intermediates</IntDir>
+    <IntDir>Intermediates\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <ExternalIncludePath>Includes;$(ExternalIncludePath)</ExternalIncludePath>
     <OutDir>$(SolutionDir)Builds\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Intermediates</IntDir>
+    <IntDir>Intermediates\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -118,7 +118,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -154,7 +154,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -173,7 +173,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Gecko.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Includes\angelscript\sdk\add_on\contextmgr\contextmgr.cpp" />
     <ClCompile Include="Includes\angelscript\sdk\add_on\datetime\datetime.cpp" />
     <ClCompile Include="Includes\angelscript\sdk\add_on\debugger\debugger.cpp" />
