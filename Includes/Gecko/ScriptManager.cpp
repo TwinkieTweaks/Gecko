@@ -99,7 +99,7 @@ namespace Gecko
 		ScriptBuilder.BuildModule();
 
 		CallbackType CallbackType = CallbackType::Main;
-		for (auto& _ : CallbackTypeSignatures)
+		for ([[maybe_unused]] auto& _ : CallbackTypeSignatures)
 		{
 			BuildScriptByCallback(Script, CallbackType);
 			(*(uint32_t*)&CallbackType)++;
@@ -187,7 +187,7 @@ namespace Gecko
 		for (auto& Script : Scripts)
 		{
 			size_t Idx = 0;
-			for (auto& _ : CallbackTypeSignatures)
+			for ([[maybe_unused]] auto& _ : CallbackTypeSignatures)
 			{
 				if (Script.Ctxs[Idx] == Ctx)
 				{
