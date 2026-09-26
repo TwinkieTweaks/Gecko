@@ -395,4 +395,8 @@
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Includes\DOCS.md" />
+    <None Include="Includes\Gecko\Exports\README.md" />
+  </ItemGroup>
 </Project>
